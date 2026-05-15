@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nvclocktop"
+version = "1.0.0"
+description = "A fullscreen terminal clock and GPU dashboard for NVIDIA Linux workstations and Apple Silicon Macs."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+  { name = "nvclocktop contributors" }
+]
+keywords = [
+  "gpu",
+  "nvidia",
+  "nvidia-smi",
+  "terminal",
+  "tui",
+  "dashboard",
+  "monitoring",
+  "clock",
+  "macos",
+  "apple-silicon",
+  "linux",
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: System :: Monitoring",
+  "Topic :: Terminals",
+]
+dependencies = [
+  "psutil>=5.9",
+  "pyfiglet>=1.0",
+  "rich>=13.7",
+]
+
+[project.optional-dependencies]
+dev = [
+  "cairosvg>=2.7",
+  "pillow>=10.0",
+  "pytest>=8.0",
+  "ruff>=0.5",
+]
+
+[project.scripts]
+nvclocktop = "gpu_clock.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gpu_clock"]
+
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

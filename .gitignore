@@ -1,0 +1,21 @@
+.DS_Store
+.venv/
+.claude/
+.omx/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+
+# Local planning and agent context
+AGENTS.md
+Agents.md
+PRD.md
+docs/PRD.md
+PyPi_token
+
+# Local archive of design iterations and generated build artifacts
+docs/archive/
