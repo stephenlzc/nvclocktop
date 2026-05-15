@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "nvclocktop"
-version = "1.0.0"
+version = "1.0.1"
 description = "A fullscreen terminal clock and GPU dashboard for NVIDIA Linux workstations and Apple Silicon Macs."
 readme = "README.md"
 requires-python = ">=3.10"

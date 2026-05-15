@@ -10,7 +10,7 @@
   Turn any terminal into a live status screen for AI workstations, local model machines, homelab servers, and SSH sessions.
 </p>
 
-<img src="docs/assets/hero-macos-apple-silicon.png" alt="nvclocktop running on an Apple Silicon Mac">
+<img src="https://raw.githubusercontent.com/stephenlzc/nvclocktop/main/docs/assets/hero-macos-apple-silicon.png" alt="nvclocktop running on an Apple Silicon Mac">
 
 </div>
 
@@ -26,23 +26,23 @@
     <th><code>--font terrace --theme cyber</code></th>
   </tr>
   <tr>
-    <td><img src="docs/assets/presets/preset-terrace-rainbow-nvidia.png" alt="terrace font with rainbow theme on NVIDIA Linux" width="420"></td>
-    <td><img src="docs/assets/presets/preset-terrace-cyber-nvidia.png" alt="terrace font with cyber theme on NVIDIA Linux" width="420"></td>
+    <td><img src="https://raw.githubusercontent.com/stephenlzc/nvclocktop/main/docs/assets/presets/preset-terrace-rainbow-nvidia.png" alt="terrace font with rainbow theme on NVIDIA Linux" width="420"></td>
+    <td><img src="https://raw.githubusercontent.com/stephenlzc/nvclocktop/main/docs/assets/presets/preset-terrace-cyber-nvidia.png" alt="terrace font with cyber theme on NVIDIA Linux" width="420"></td>
   </tr>
   <tr>
     <th><code>--font big --theme ocean</code></th>
     <th><code>--font standard --theme amber</code></th>
   </tr>
   <tr>
-    <td><img src="docs/assets/presets/preset-big-ocean-nvidia.png" alt="big font with ocean theme on NVIDIA Linux" width="420"></td>
-    <td><img src="docs/assets/presets/preset-standard-amber-nvidia.png" alt="standard font with amber theme on NVIDIA Linux" width="420"></td>
+    <td><img src="https://raw.githubusercontent.com/stephenlzc/nvclocktop/main/docs/assets/presets/preset-big-ocean-nvidia.png" alt="big font with ocean theme on NVIDIA Linux" width="420"></td>
+    <td><img src="https://raw.githubusercontent.com/stephenlzc/nvclocktop/main/docs/assets/presets/preset-standard-amber-nvidia.png" alt="standard font with amber theme on NVIDIA Linux" width="420"></td>
   </tr>
   <tr>
     <th><code>--font slant --theme mono</code></th>
     <th></th>
   </tr>
   <tr>
-    <td><img src="docs/assets/presets/preset-slant-mono-nvidia.png" alt="slant font with mono theme on NVIDIA Linux" width="420"></td>
+    <td><img src="https://raw.githubusercontent.com/stephenlzc/nvclocktop/main/docs/assets/presets/preset-slant-mono-nvidia.png" alt="slant font with mono theme on NVIDIA Linux" width="420"></td>
     <td></td>
   </tr>
 </table>
@@ -135,7 +135,7 @@ Not currently supported:
 ## Development
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/nvclocktop.git
+git clone https://github.com/stephenlzc/nvclocktop.git
 cd nvclocktop
 python3 -m venv .venv
 . .venv/bin/activate

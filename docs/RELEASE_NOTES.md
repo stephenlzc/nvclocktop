@@ -1,5 +1,14 @@
 # Release Notes
 
+## v1.0.1
+
+Documentation-only patch release.
+
+### Fixed
+
+- Updated README image links to use absolute GitHub raw URLs so screenshots render correctly on PyPI.
+- Updated the development clone URL to point to the published GitHub repository.
+
 ## v1.0.0
 
 Initial stable release of `nvclocktop`, a fullscreen terminal clock and GPU dashboard for NVIDIA Linux workstations and Apple Silicon Macs.
