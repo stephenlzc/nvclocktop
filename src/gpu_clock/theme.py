@@ -46,9 +46,25 @@ THEME_PRESETS = tuple(CLOCK_THEMES)
 RAINBOW_2 = CLOCK_THEMES["rainbow"]
 
 
-def clock_text(value: str, theme: str = "rainbow") -> Text:
+def clock_text(value: str, theme: str = "rainbow", cell_widths: list[int] | None = None) -> Text:
     palette = CLOCK_THEMES[theme]
+    if theme == "rainbow" and cell_widths is not None:
+        return _cell_gradient_text(value, palette, cell_widths)
     return gradient_text(value, palette)
+
+
+def _cell_gradient_text(value: str, palette: list[tuple[int, int, int]], widths: list[int]) -> Text:
+    text = Text(justify="center")
+    total_width = sum(widths)
+    for line in value.splitlines():
+        start = 0
+        for width in widths:
+            palette_index = int((start + width / 2) / max(total_width, 1) * len(palette))
+            color = palette[min(palette_index, len(palette) - 1)]
+            text.append(line[start:start + width], style=f"rgb({color[0]},{color[1]},{color[2]})")
+            start += width
+        text.append("\n")
+    return text
 
 
 def gradient_text(value: str, palette: list[tuple[int, int, int]]) -> Text:

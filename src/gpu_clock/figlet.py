@@ -9,11 +9,15 @@ FONT_PRESETS = ("terrace", "big", "standard", "slant", "chunky")
 
 
 def render_time(value: str, font: str = "terrace") -> str:
+    return render_time_cells(value, font)[0]
+
+
+def render_time_cells(value: str, font: str = "terrace") -> tuple[str, list[int]]:
     normalized = _normalize_font(font)
     try:
-        return _fixed_width_figlet(value, normalized)
+        return _fixed_width_figlet(value, normalized), [_cell_width(c, normalized) for c in value]
     except pyfiglet.FontNotFound:
-        return _fixed_width_figlet(value, "big")
+        return _fixed_width_figlet(value, "big"), [_cell_width(c, "big") for c in value]
 
 
 def _fixed_width_figlet(value: str, font: str) -> str:

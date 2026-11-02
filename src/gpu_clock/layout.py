@@ -11,7 +11,7 @@ from rich.table import Table
 from rich.text import Text
 
 from gpu_clock.cpu import CpuInfo
-from gpu_clock.figlet import render_time
+from gpu_clock.figlet import render_time_cells
 from gpu_clock.gpu import GpuInfo
 from gpu_clock.theme import clock_text
 
@@ -33,10 +33,10 @@ def build_snapshot(
     time_value = _format_time(now, args.clock, args.show_seconds)
     date_line = now.strftime("%B %-d, %Y | %A")
 
-    time_art = render_time(time_value, font=_time_font(args.font, compact))
+    time_art, cell_widths = render_time_cells(time_value, font=_time_font(args.font, compact))
     header_width = terminal_width or 120
     header = Group(
-        Align.center(clock_text(time_art, args.theme), width=header_width),
+        Align.center(clock_text(time_art, args.theme, cell_widths), width=header_width),
         Align.center(Text(date_line, style="bold"), width=header_width),
         Align.center(Text("Q Quit | H Help", style="dim"), width=header_width),
     )
